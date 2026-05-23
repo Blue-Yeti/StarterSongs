@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Beatles - Yesterday (Lyrics & Translations)</title>
+    <title>Robbie Williams - Feel</title>
     <style>
       :root {
-        --bg-color: #0f172a;
-        --card-bg: #1e293b;
-        --accent-color: #fbbf24;
-        --accent-hover: #f59e0b;
-        --text-main: #f8fafc;
-        --text-muted: #94a3b8;
-        --text-translation: #cbd5e1;
-        --border-color: #334155;
+        --bg-color: #0b0f19;
+        --card-bg: #111827;
+        --accent-color: #38bdf8;
+        --accent-hover: #0284c7;
+        --text-main: #f9fafb;
+        --text-muted: #9ca3af;
+        --text-translation: #e5e7eb;
+        --border-color: #374151;
       }
 
       * {
@@ -42,8 +42,8 @@
         background-color: var(--card-bg);
         border-radius: 16px;
         box-shadow:
-          0 10px 25px -5px rgba(0, 0, 0, 0.3),
-          0 8px 10px -6px rgba(0, 0, 0, 0.3);
+          0 10px 25px -5px rgba(0, 0, 0, 0.4),
+          0 8px 10px -6px rgba(0, 0, 0, 0.4);
         padding: 32px;
         border: 1px solid var(--border-color);
       }
@@ -74,7 +74,7 @@
         border-radius: 12px;
         background-color: #000;
         margin-bottom: 32px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
         border: 1px solid var(--border-color);
       }
 
@@ -97,7 +97,7 @@
 
       .btn,
       .video-toggle {
-        background-color: #1e293b;
+        background-color: #111827;
         color: var(--text-muted);
         border: 2px solid var(--border-color);
         padding: 10px 20px;
@@ -118,9 +118,9 @@
 
       .btn.active {
         background-color: var(--accent-color);
-        color: #0f172a;
+        color: #0b0f19;
         border-color: var(--accent-color);
-        box-shadow: 0 4px 14px rgba(251, 191, 36, 0.4);
+        box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
       }
 
       .lyrics-container {
@@ -151,18 +151,18 @@
 
       .stanza.chorus {
         border-left: 4px solid var(--accent-color);
-        background-color: rgba(251, 191, 36, 0.03);
+        background-color: rgba(56, 189, 248, 0.03);
         padding-left: 20px;
       }
 
       .stanza.chorus:hover {
-        background-color: rgba(251, 191, 36, 0.05);
+        background-color: rgba(56, 189, 248, 0.05);
       }
 
       .lyrics-container:not(.side-by-side) .stanza.chorus {
         border-left: none;
         padding-left: 16px;
-        box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.18);
+        box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.18);
       }
 
       .lyrics-row {
@@ -234,15 +234,15 @@
   <body>
     <div class="container">
       <header>
-        <h1>Yesterday</h1>
-        <p>The Beatles</p>
+        <h1>Feel</h1>
+        <p>Robbie Williams</p>
       </header>
 
       <div class="video-wrapper">
         <iframe
           id="song-video"
-          src="https://www.youtube.com/embed/wXTJBr9tt8Q"
-          title="The Beatles - Yesterday (Music Video)"
+          src="https://www.youtube.com/embed/iy4mXZN1Zzk"
+          title="Robbie Williams - Feel (Music Video)"
           allow="
             accelerometer;
             autoplay;
@@ -275,9 +275,7 @@
         </button>
       </div>
 
-      <div id="lyrics-display" class="lyrics-container">
-        <!-- Dynamic Content Injected Here -->
-      </div>
+      <div id="lyrics-display" class="lyrics-container"></div>
     </div>
 
     <footer>UKRAINIAN ENGLISH</footer>
@@ -288,19 +286,24 @@
           type: "verse",
           lines: [
             {
-              eng: "Yesterday all my troubles seemed so far away",
-              ukr: "Вчора всі мої біди здавалися такими далекими",
-              rus: "Вчера все мои беды казались такими далекими",
+              eng: "Come and hold my hand",
+              ukr: "Підійди й візьми мою руку",
+              rus: "Приди и возьми мою руку",
             },
             {
-              eng: "Now it looks as though they're here to stay",
-              ukr: "А тепер здається, що вони залишаться назавжди",
-              rus: "А теперь кажется, что они пришли навсегда",
+              eng: "I wanna contact the living",
+              ukr: "Я хочу відчути зв'язок із живими",
+              rus: "Я хочу связаться с живыми",
             },
             {
-              eng: "Oh, I believe in yesterday",
-              ukr: "О, я вірю у вчорашній день",
-              rus: "О, я верю во вчерашний день",
+              eng: "Not sure I understand",
+              ukr: "Не певен, чи розумію я",
+              rus: "Не уверен, что понимаю",
+            },
+            {
+              eng: "This role I've been given",
+              ukr: "Роль, яку мне доручили",
+              rus: "Роль, которая мне досталась",
             },
           ],
         },
@@ -308,19 +311,24 @@
           type: "verse",
           lines: [
             {
-              eng: "Suddenly I'm not half the man I used to be",
-              ukr: "Зненацька я й наполовину не той, яким був колись",
-              rus: "Вдруг я стал и наполовину не тем, кем был когда-то",
+              eng: "Not gonna lie",
+              ukr: "Не буду брехати",
+              rus: "Не стану лгать",
             },
             {
-              eng: "There's a shadow hanging over me",
-              ukr: "Наді мною нависла тінь",
-              rus: "Надо мной нависла тень",
+              eng: "As if I'm losing my mind",
+              ukr: "Здається, я втрачаю глузд",
+              rus: "Будто я схожу с ума",
             },
             {
-              eng: "Oh, yesterday came suddenly",
-              ukr: "О, вчорашній день настав так раптово",
-              rus: "О, вчерашний день наступил так внезапно",
+              eng: "Scared of running out of time",
+              ukr: "Боюся, що мені не вистачить часу",
+              rus: "Боюсь, что у меня кончается время",
+            },
+            {
+              eng: "I really wanna on air",
+              ukr: "Я так прагну бути почутим",
+              rus: "Я действительно хочу быть услышанным",
             },
           ],
         },
@@ -328,14 +336,24 @@
           type: "chorus",
           lines: [
             {
-              eng: "Why she had to go I don't know, she wouldn't say",
-              ukr: "Чому їй довелося піти, я не знаю, вона не схотіла сказати",
-              rus: "Почему она должна была уйти — я не знаю, она не захотела сказать",
+              eng: "I just wanna feel real love",
+              ukr: "Я просто хочу відчути справжнє кохання",
+              rus: "Я просто хочу почувствовать настоящую любовь",
             },
             {
-              eng: "I said something wrong, now I long for yesterday",
-              ukr: "Я сказав щось не те, тепер я тужу за вчорашнім днем",
-              rus: "Я сказал что-то не то, теперь я тоскую по вчерашнему дню",
+              eng: "Feel the home that I live in",
+              ukr: "Відчути дім, у якому живу",
+              rus: "Почувствовать дом, в котором живу",
+            },
+            {
+              eng: "'Cause I got too much life running through my veins",
+              ukr: "Бо в моїх жилах вирує забагато життя",
+              rus: "Ведь в моих венах течет слишком много жизни",
+            },
+            {
+              eng: "Going to waste",
+              ukr: "Яке витрачається намарно",
+              rus: "И она тратится впустую",
             },
           ],
         },
@@ -343,19 +361,49 @@
           type: "verse",
           lines: [
             {
-              eng: "Yesterday love was such an easy game to play",
-              ukr: "Вчора кохання було такою легкою грою",
-              rus: "Вчера любовь была такой легкой игрой",
+              eng: "I don't wanna die",
+              ukr: "Я не хочу помирати",
+              rus: "Я не хочу умирать",
             },
             {
-              eng: "Now I need a place to hide away",
-              ukr: "Тепер мені треба десь сховатися",
-              rus: "Теперь мне нужно где-то спрятаться",
+              eng: "But I ain't keen on living either",
+              ukr: "Але й жити особливого бажання немає",
+              rus: "Но и к жизни не слишком стремлюсь",
             },
             {
-              eng: "Oh, I believe in yesterday",
-              ukr: "О, я вірю у вчорашній день",
-              rus: "О, я верю во вчерашний день",
+              eng: "Before I fall in love",
+              ukr: "Ще до того, як закохаюся",
+              rus: "Прежде чем влюбиться",
+            },
+            {
+              eng: "I'm preparing to leave her",
+              ukr: "Я вже готуюся покинути її",
+              rus: "Я уже готовлюсь оставить её",
+            },
+          ],
+        },
+        {
+          type: "verse",
+          lines: [
+            {
+              eng: "I scare myself to death",
+              ukr: "Я лякаю себе до смерті",
+              rus: "Я пугаю себя до смерти",
+            },
+            {
+              eng: "That's why I keep on running",
+              ukr: "Тому й продовжую бігти геть",
+              rus: "Поэтому продолжаю бежать",
+            },
+            {
+              eng: "Before I've even begun",
+              ukr: "Навіть іще не почавши",
+              rus: "Даже еще не начав",
+            },
+            {
+              eng: "When I'm track down the sun",
+              ukr: "Коли я йду слідами сонця",
+              rus: "Когда я преследую солнце",
             },
           ],
         },
@@ -363,14 +411,24 @@
           type: "chorus",
           lines: [
             {
-              eng: "Why she had to go I don't know, she wouldn't say",
-              ukr: "Чому їй довелося піти, я не знаю, вона не схотіла сказати",
-              rus: "Почему она должна была уйти — я не знаю, она не захотела сказать",
+              eng: "I just wanna feel real love",
+              ukr: "Я просто хочу відчути справжнє кохання",
+              rus: "Я просто хочу почувствовать настоящую любовь",
             },
             {
-              eng: "I said something wrong, now I long for yesterday",
-              ukr: "Я сказав щось не те, тепер я тужу за вчорашнім днем",
-              rus: "Я сказал что-то не то, теперь я тоскую по вчерашнему дню",
+              eng: "Feel the home that I live in",
+              ukr: "Відчути дім, у якому живу",
+              rus: "Почувствовать дом, в котором живу",
+            },
+            {
+              eng: "'Cause I got too much life running through my veins",
+              ukr: "Бо в моїх жилах вирує забагато життя",
+              rus: "Ведь в моих венах течет слишком много жизни",
+            },
+            {
+              eng: "Going to waste",
+              ukr: "Яке витрачається намарно",
+              rus: "И она тратится впустую",
             },
           ],
         },
@@ -378,24 +436,54 @@
           type: "verse",
           lines: [
             {
-              eng: "Yesterday love was such an easy game to play",
-              ukr: "Вчора кохання було такою легкою грою",
-              rus: "Вчера любовь была такой легкой игрой",
+              eng: "I need to feel real love",
+              ukr: "Мені потрібно відчути справжнє кохання",
+              rus: "Мне нужно почувствовать настоящую любовь",
             },
             {
-              eng: "Now I need a place to hide away",
-              ukr: "Тепер мені треба десь сховатися",
-              rus: "Теперь мне нужно где-то спрятаться",
+              eng: "In a life ever after",
+              ukr: "У майбутньому вічному житті",
+              rus: "В жизни грядущей и вечной",
             },
             {
-              eng: "Oh, I believe in yesterday",
-              ukr: "О, я вірю у вчорашній день",
-              rus: "О, я верю во вчерашний день",
+              eng: "There's a hole in my soul",
+              ukr: "У моїй душі зяє діра",
+              rus: "В моей душе дыра",
             },
             {
-              eng: "Mm-mm-mm-mm-mm-mm-mm",
-              ukr: "Мм-мм-мм-мм-мм-мм-мм",
-              rus: "Мм-мм-мм-мм-мм-мм-мм",
+              eng: "You can see it in my face",
+              ukr: "Ти бачиш це по моєму обличчю",
+              rus: "Ты видишь это по моему лицу",
+            },
+            {
+              eng: "It's a real big place",
+              ukr: "Це справді величезна порожнеча",
+              rus: "Это действительно огромное пространство",
+            },
+          ],
+        },
+        {
+          type: "chorus",
+          lines: [
+            {
+              eng: "I just wanna feel real love",
+              ukr: "Я просто хочу відчути справжнє кохання",
+              rus: "Я просто хочу почувствовать настоящую любовь",
+            },
+            {
+              eng: "Feel the home that I live in",
+              ukr: "Відчути дім, у якому живу",
+              rus: "Почувствовать дом, в котором живу",
+            },
+            {
+              eng: "'Cause I got too much life running through my veins",
+              ukr: "Бо в моїх жилах вирує забагато життя",
+              rus: "Ведь в моих венах течет слишком много жизни",
+            },
+            {
+              eng: "Going to waste",
+              ukr: "Яке витрачається намарно",
+              rus: "И она тратится впустую",
             },
           ],
         },
@@ -403,13 +491,13 @@
 
       const videoSources = {
         music: {
-          src: "https://www.youtube.com/embed/wXTJBr9tt8Q",
-          title: "The Beatles - Yesterday (Music Video)",
+          src: "https://www.youtube.com/embed/iy4mXZN1Zzk",
+          title: "Robbie Williams - Feel (Music Video)",
           buttonLabel: "Switch to Lyric Video",
         },
         lyric: {
-          src: "https://www.youtube.com/embed/ogKi-58S26Y",
-          title: "The Beatles - Yesterday (Lyric Video)",
+          src: "https://www.youtube.com/embed/m9JlqyW_GAk",
+          title: "Robbie Williams - Feel (Lyric Video)",
           buttonLabel: "Switch to Music Video",
         },
       };
@@ -432,7 +520,6 @@
       }
 
       function switchMode(mode) {
-        // Update button active state
         const buttons = document.querySelectorAll(".btn");
         buttons.forEach((btn) => btn.classList.remove("active"));
 
@@ -476,7 +563,6 @@
         });
       }
 
-      // Initial paint
       updateVideo();
       switchMode("eng");
     </script>
