@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beatles - Yesterday (Lyrics & Translations)</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #fbbf24;
+            --accent-hover: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-translation: #cbd5e1;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            padding: 32px;
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: #000;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: #1e293b;
+            color: var(--text-muted);
+            border: 2px solid var(--border-color);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            outline: none;
+        }
+
+        .btn:hover {
+            color: var(--text-main);
+            border-color: var(--text-muted);
+            transform: translateY(-1px);
+        }
+
+        .btn.active {
+            background-color: var(--accent-color);
+            color: #0f172a;
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 14px rgba(251, 191, 36, 0.4);
+        }
+
+        .lyrics-container {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-top: 10px;
+        }
+
+        .stanza {
+            padding: 16px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+
+        .stanza:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .stanza.chorus {
+            border-left: 4px solid var(--accent-color);
+            background-color: rgba(251, 191, 36, 0.03);
+            padding-left: 20px;
+        }
+
+        .stanza.chorus:hover {
+            background-color: rgba(251, 191, 36, 0.05);
+        }
+
+        .lyrics-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .lyrics-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .side-by-side .lyrics-row {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .line {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .line.original {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .line.translation {
+            color: var(--text-translation);
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 8px;
+            }
+            .container {
+                padding: 20px 16px;
+            }
+            header h1 {
+                font-size: 1.75rem;
+            }
+            .side-by-side .lyrics-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+                margin-bottom: 18px;
+            }
+            .line.translation {
+                margin-bottom: 8px;
+                border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+                padding-bottom: 8px;
+            }
+            .line {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Yesterday</h1>
+            <p>The Beatles</p>
+        </header>
+
+        <div class="video-wrapper">
+            <!-- Embedded official YouTube video for Yesterday -->
+            <iframe src="https://www.youtube.com/embed/fCV9oqtwyVA" title="The Beatles - Yesterday" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="controls">
+            <button class="btn active" onclick="switchMode('eng')">English Original</button>
+            <button class="btn" onclick="switchMode('ukr')">English / Українська</button>
+            <button class="btn" onclick="switchMode('rus')">English / Русский</button>
+        </div>
+
+        <div id="lyrics-display" class="lyrics-container">
+            <!-- Dynamic Content Injected Here -->
+        </div>
+    </div>
+
+    <footer>
+        UKRAINIAN ENGLISH
+    </footer>
+
+    <script>
+        const songData = [
+            {
+                type: "verse",
+                lines: [
+                    { eng: "Yesterday all my troubles seemed so far away", ukr: "Вчора всі мої біди здавалися такими далекими", rus: "Вчера все мои беды казались такими далекими" },
+                    { eng: "Now it looks as though they're here to stay", ukr: "А тепер здається, що вони залишаться назавжди", rus: "А теперь кажется, что они пришли навсегда" },
+                    { eng: "Oh, I believe in yesterday", ukr: "О, я вірю у вчорашній день", rus: "О, я верю во вчерашний день" }
+                ]
+            },
+            {
+                type: "verse",
+                lines: [
+                    { eng: "Suddenly I'm not half the man I used to be", ukr: "Зненацька я й наполовину не той, яким був колись", rus: "Вдруг я стал и наполовину не тем, кем был когда-то" },
+                    { eng: "There's a shadow hanging over me", ukr: "Наді мною нависла тінь", rus: "Надо мной нависла тень" },
+                    { eng: "Oh, yesterday came suddenly", ukr: "О, вчорашній день настав так раптово", rus: "О, вчерашний день наступил так внезапно" }
+                ]
+            },
+            {
+                type: "chorus",
+                lines: [
+                    { eng: "Why she had to go I don't know, she wouldn't say", ukr: "Чому їй довелося піти, я не знаю, вона не схотіла сказати", rus: "Почему она должна была уйти — я не знаю, она не захотела сказать" },
+                    { eng: "I said something wrong, now I long for yesterday", ukr: "Я сказав щось не те, тепер я тужу за вчорашнім днем", rus: "Я сказал что-то не то, теперь я тоскую по вчерашнему дню" }
+                ]
+            },
+            {
+                type: "verse",
+                lines: [
+                    { eng: "Yesterday love was such an easy game to play", ukr: "Вчора кохання було такою легкою грою", rus: "Вчера любовь была такой легкой игрой" },
+                    { eng: "Now I need a place to hide away", ukr: "Тепер мені треба десь сховатися", rus: "Теперь мне нужно где-то спрятаться" },
+                    { eng: "Oh, I believe in yesterday", ukr: "О, я вірю у вчорашній день", rus: "О, я верю во вчерашний день" }
+                ]
+            },
+            {
+                type: "chorus",
+                lines: [
+                    { eng: "Why she had to go I don't know, she wouldn't say", ukr: "Чому їй довелося піти, я не знаю, вона не схотіла сказати", rus: "Почему она должна была уйти — я не знаю, она не захотела сказать" },
+                    { eng: "I said something wrong, now I long for yesterday", ukr: "Я сказав щось не те, тепер я тужу за вчорашнім днем", rus: "Я сказал что-то не то, теперь я тоскую по вчерашнему дню" }
+                ]
+            },
+            {
+                type: "verse",
+                lines: [
+                    { eng: "Yesterday love was such an easy game to play", ukr: "Вчора кохання було такою легкою грою", rus: "Вчера любовь была такой легкой игрой" },
+                    { eng: "Now I need a place to hide away", ukr: "Тепер мені треба десь сховатися", rus: "Теперь мне нужно где-то спрятаться" },
+                    { eng: "Oh, I believe in yesterday", ukr: "О, я вірю у вчорашній день", rus: "О, я верю во вчерашний день" },
+                    { eng: "Mm-mm-mm-mm-mm-mm-mm", ukr: "Мм-мм-мм-мм-мм-мм-мм", rus: "Мм-мм-мм-мм-мм-мм-мм" }
+                ]
+            }
+        ];
+
+        function switchMode(mode) {
+            // Update button active state
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            if (mode === 'eng') buttons[0].classList.add('active');
+            else if (mode === 'ukr') buttons[1].classList.add('active');
+            else if (mode === 'rus') buttons[2].classList.add('active');
+
+            const container = document.getElementById('lyrics-display');
+            container.innerHTML = '';
+
+            if (mode === 'eng') {
+                container.classList.remove('side-by-side');
+            } else {
+                container.classList.add('side-by-side');
+            }
+
+            songData.forEach(stanza => {
+                const stanzaDiv = document.createElement('div');
+                stanzaDiv.className = `stanza ${stanza.type}`;
+
+                stanza.lines.forEach(line => {
+                    const rowDiv = document.createElement('div');
+                    rowDiv.className = 'lyrics-row';
+
+                    const engLine = document.createElement('div');
+                    engLine.className = 'line original';
+                    engLine.textContent = line.eng;
+                    rowDiv.appendChild(engLine);
+
+                    if (mode !== 'eng') {
+                        const transLine = document.createElement('div');
+                        transLine.className = 'line translation';
+                        transLine.textContent = line[mode];
+                        rowDiv.appendChild(transLine);
+                    }
+
+                    stanzaDiv.appendChild(rowDiv);
+                });
+
+                container.appendChild(stanzaDiv);
+            });
+        }
+
+        // Initial paint
+        switchMode('eng');
+    </script>
+</body>
+</html>
